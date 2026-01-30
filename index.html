@@ -10,7 +10,7 @@
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: 'Arial', sans-serif;
+      font-family: Arial, sans-serif;
     }
 
     body {
@@ -26,30 +26,32 @@
     }
 
     header img {
-      max-width: 220px;
+      max-width: 200px;
       margin-bottom: 1rem;
     }
 
     header h1 {
-      font-size: 2rem;
       color: #5a7a2c;
+      font-size: 2rem;
     }
 
     header p {
-      font-size: 1.1rem;
       color: #666;
-      margin-top: 0.5rem;
     }
 
     .hero {
       padding: 4rem 2rem;
       text-align: center;
-      background: linear-gradient(to bottom, #ffffff, #eef2e6);
+      background: linear-gradient(
+          rgba(90, 122, 44, 0.6),
+          rgba(90, 122, 44, 0.6)
+        ),
+        url("fondo.jpg") center/cover no-repeat;
+      color: #ffffff;
     }
 
     .hero h2 {
       font-size: 2.4rem;
-      color: #3f5f1f;
       margin-bottom: 1rem;
     }
 
@@ -57,7 +59,6 @@
       max-width: 700px;
       margin: auto;
       font-size: 1.2rem;
-      color: #444;
     }
 
     .section {
@@ -67,14 +68,9 @@
     }
 
     .section h3 {
-      font-size: 1.8rem;
-      margin-bottom: 1rem;
       color: #5a7a2c;
-    }
-
-    .section p {
-      font-size: 1.1rem;
-      color: #555;
+      margin-bottom: 1rem;
+      font-size: 1.8rem;
     }
 
     footer {
@@ -94,43 +90,87 @@
       font-size: 0.9rem;
       color: #ddd;
     }
+
+    /* WHATSAPP */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 22px;
+      right: 22px;
+      width: 60px;
+      height: 60px;
+      background-color: #eef2e6;
+      border: 2px solid #5a7a2c;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
+      z-index: 1000;
+      transition: transform 0.3s ease;
+    }
+
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp-float svg {
+      width: 32px;
+      height: 32px;
+    }
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
   <header>
-    <img src="logo.png" alt="Seed & Grano Logo">
+    <img src="logo.png" alt="Seed & Grano">
     <h1>Seed & Grano</h1>
     <p>Semillas naturales & granos seleccionados</p>
   </header>
 
-  <!-- HERO -->
   <section class="hero">
     <h2>Del origen natural a tu mesa</h2>
     <p>
-      En Seed & Grano creemos en lo simple, lo auténtico y lo natural.
-      Seleccionamos semillas y granos de alta calidad, respetando su origen
-      y su esencia.
+      Seleccionamos semillas y granos de alta calidad, respetando su origen,
+      su esencia y la naturaleza.
     </p>
   </section>
 
-  <!-- STORYTELLING -->
   <section class="section">
     <h3>Nuestra filosofía</h3>
     <p>
       Cada grano cuenta una historia. Trabajamos con procesos artesanales,
-      cuidando cada detalle para ofrecer productos honestos, saludables
-      y llenos de vida.
+      ofreciendo productos honestos, saludables y llenos de vida.
     </p>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <img src="logo.png" alt="Seed & Grano">
     <p>© 2026 Seed & Grano · Todos los derechos reservados</p>
   </footer>
+
+  <!-- WHATSAPP -->
+  <a
+    href="https://wa.me/521XXXXXXXXXX?text=Hola%20me%20gustaría%20recibir%20información"
+    class="whatsapp-float"
+    target="_blank"
+    aria-label="WhatsApp Seed & Grano"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+      <path fill="#5a7a2c"
+        d="M16 3C9.4 3 4 8.4 4 15c0 2.6.8 5 2.2 7L4 29l7.2-2.1
+        c1.9 1 4.1 1.6 6.6 1.6 6.6 0 12-5.4 12-12S22.6 3 16 3z"/>
+      <path fill="#ffffff"
+        d="M20.4 18.3c-.3-.2-1.8-.9-2-.9-.3 0-.5.2-.7.4-.2.2-.8.9-1
+        1.1-.2.2-.4.2-.7 0s-1.3-.5-2.5-1.6c-.9-.8-1.5-1.9-1.7-2.2
+        -.2-.3 0-.5.2-.7.2-.2.3-.4.5-.6.2-.2.2-.3.3-.5.1-.2
+        0-.4 0-.6 0-.2-.7-1.7-1-2.3-.3-.6-.6-.5-.8-.5h-.7
+        c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8 0 1.6 1.2 3.2
+        1.3 3.4.2.2 2.4 3.7 5.8 5.2.8.3 1.4.5 1.9.6.8.2
+        1.6.2 2.2.1.7-.1 2-.8 2.3-1.5.3-.7.3-1.3.2-1.5
+        -.1-.2-.3-.3-.6-.5z"/>
+    </svg>
+  </a>
 
 </body>
 </html>
