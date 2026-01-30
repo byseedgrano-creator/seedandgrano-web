@@ -3,227 +3,134 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>Seed & Grano | Semillas naturales y granos</title>
-  <meta name="description" content="Seed & Grano es un proyecto de alimentación natural y artesanal. Semillas, granos y productos conscientes, hechos con cuidado y propósito." />
+  <title>Seed & Grano | Semillas Naturales</title>
 
   <style>
-    :root {
-      --primary: #6b8e23;
-      --accent: #c9a24d;
-      --bg-soft: #f6f5f0;
-      --text: #2f2f2f;
-      --muted: #6b6b6b;
-    }
-
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
+      font-family: 'Arial', sans-serif;
     }
 
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-      color: var(--text);
-      background: #ffffff;
+      background-color: #f9f9f6;
+      color: #2f2f2f;
       line-height: 1.6;
     }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
-
-    /* ---------- HERO ---------- */
     header {
-      background: var(--bg-soft);
-      padding: 4rem 1.5rem 5rem;
+      padding: 2rem;
       text-align: center;
+      background-color: #ffffff;
     }
 
-    .logo {
+    header img {
       max-width: 220px;
-      margin: 0 auto 1.5rem;
-    }
-
-    header h1 {
-      font-size: 2.2rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
-
-    header p {
-      max-width: 620px;
-      margin: 0.8rem auto 1.8rem;
-      color: var(--muted);
-      font-size: 1.05rem;
-    }
-
-    .cta {
-      display: inline-block;
-      padding: 0.75rem 1.8rem;
-      background: var(--primary);
-      color: #fff;
-      border-radius: 6px;
-      font-weight: 500;
-      transition: transform 0.2s ease, opacity 0.2s ease;
-    }
-
-    .cta:hover {
-      opacity: 0.9;
-      transform: translateY(-1px);
-    }
-
-    /* ---------- SECTIONS ---------- */
-    section {
-      max-width: 960px;
-      margin: auto;
-      padding: 4rem 1.5rem;
-    }
-
-    section h2 {
-      font-size: 1.6rem;
       margin-bottom: 1rem;
     }
 
-    section p {
-      max-width: 720px;
-      color: var(--muted);
+    header h1 {
+      font-size: 2rem;
+      color: #5a7a2c;
     }
 
-    /* ---------- STORY ---------- */
-    .story {
-      background: #ffffff;
-    }
-
-    /* ---------- GRID ---------- */
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 2rem;
-      margin-top: 2.5rem;
-    }
-
-    .card {
-      background: var(--bg-soft);
-      padding: 2rem;
-      border-radius: 12px;
-    }
-
-    .card h3 {
-      margin-bottom: 0.6rem;
+    header p {
       font-size: 1.1rem;
+      color: #666;
+      margin-top: 0.5rem;
     }
 
-    .card p {
-      font-size: 0.95rem;
-    }
-
-    /* ---------- VALUES ---------- */
-    .values p {
-      font-size: 1.05rem;
-    }
-
-    /* ---------- FOOTER ---------- */
-    footer {
-      background: #fafafa;
-      padding: 2.5rem 1.5rem;
+    .hero {
+      padding: 4rem 2rem;
       text-align: center;
-      font-size: 0.85rem;
-      color: var(--muted);
+      background: linear-gradient(to bottom, #ffffff, #eef2e6);
+    }
+
+    .hero h2 {
+      font-size: 2.4rem;
+      color: #3f5f1f;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: auto;
+      font-size: 1.2rem;
+      color: #444;
+    }
+
+    .section {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section h3 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #5a7a2c;
+    }
+
+    .section p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+
+    footer {
+      background-color: #2f3a1f;
+      color: #ffffff;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 3rem;
     }
 
     footer img {
       max-width: 120px;
-      margin: 0 auto 0.8rem;
+      margin-bottom: 1rem;
+    }
+
+    footer p {
+      font-size: 0.9rem;
+      color: #ddd;
     }
   </style>
 </head>
 
 <body>
 
-  <!-- HERO -->
+  <!-- HEADER -->
   <header>
-    <img src="assets/logo.png" alt="Seed & Grano" class="logo"/>
-
-
-    <h1>Semillas naturales & granos</h1>
-
-    <p>
-      Alimentación artesanal, simple y consciente.
-      Productos hechos con cuidado, ingredientes reales y una conexión honesta con lo natural.
-    </p>
-
-    <a
-      href="https://wa.me/527702029080"
-      target="_blank"
-      rel="noopener"
-      class="cta"
-    >
-      Contactar por WhatsApp
-    </a>
+    <img src="logo.png" alt="Seed & Grano Logo">
+    <h1>Seed & Grano</h1>
+    <p>Semillas naturales & granos seleccionados</p>
   </header>
 
-  <!-- STORYTELLING -->
-  <section class="story">
-    <h2>Nuestra historia</h2>
+  <!-- HERO -->
+  <section class="hero">
+    <h2>Del origen natural a tu mesa</h2>
     <p>
-      Seed & Grano nace desde la necesidad de volver a lo esencial.
-      Creemos en los procesos simples, en el tiempo dedicado a cada detalle
-      y en productos que acompañan el día a día de manera consciente.
-      Trabajamos con semillas y granos seleccionados,
-      priorizando lo artesanal por sobre lo industrial.
+      En Seed & Grano creemos en lo simple, lo auténtico y lo natural.
+      Seleccionamos semillas y granos de alta calidad, respetando su origen
+      y su esencia.
     </p>
   </section>
 
-  <!-- OFFER -->
-  <section>
-    <h2>Qué ofrecemos</h2>
-
-    <div class="grid">
-      <div class="card">
-        <h3>Granola artesanal</h3>
-        <p>
-          Elaborada en pequeños lotes, cuidando sabor, textura y equilibrio.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Semillas y granos naturales</h3>
-        <p>
-          Ingredientes seleccionados, sin procesos innecesarios.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Snacks conscientes</h3>
-        <p>
-          Opciones simples para acompañar una alimentación real.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- VALUES -->
-  <section class="values">
-    <h2>Nuestros valores</h2>
+  <!-- STORYTELLING -->
+  <section class="section">
+    <h3>Nuestra filosofía</h3>
     <p>
-      🌱 Natural · 🧺 Artesanal · 🤍 Calidad · ♻️ Conciencia
+      Cada grano cuenta una historia. Trabajamos con procesos artesanales,
+      cuidando cada detalle para ofrecer productos honestos, saludables
+      y llenos de vida.
     </p>
   </section>
 
   <!-- FOOTER -->
   <footer>
-    <img src="assets/logo.png" alt="Seed & Grano" class="logo" />
-
-    © 2026 Seed & Grano · Semillas naturales & granos
+    <img src="logo.png" alt="Seed & Grano">
+    <p>© 2026 Seed & Grano · Todos los derechos reservados</p>
   </footer>
 
 </body>
 </html>
-
