@@ -6,39 +6,74 @@
 <title>Seed & Grano</title>
 
 <style>
-body{
+*{
   margin:0;
+  padding:0;
+  box-sizing:border-box;
   font-family: Arial, sans-serif;
+}
+
+body{
   background:#f9f9f6;
   color:#2f2f2f;
   text-align:center;
+  line-height:1.6;
 }
 
+/* HEADER */
 header{
-  padding:30px 20px;
+  padding:32px 20px;
+  background:#ffffff;
 }
 
 header img{
-  max-width:200px;
+  max-width:220px;
+  margin-bottom:16px;
 }
 
-h1{
+header h1{
   color:#5a7a2c;
+  font-size:2rem;
 }
 
+header p{
+  color:#666;
+  font-size:1.1rem;
+}
+
+/* HERO */
 .hero{
   background:#9fb57c;
-  color:#fff;
-  padding:60px 20px;
+  color:#ffffff;
+  padding:64px 20px;
 }
 
+.hero h2{
+  font-size:2.3rem;
+  margin-bottom:20px;
+}
+
+.hero p{
+  font-size:1.2rem;
+  max-width:800px;
+  margin:0 auto;
+}
+
+/* FOOTER */
 footer{
   background:#2f3a1f;
-  color:#fff;
-  padding:20px;
+  color:#ffffff;
+  padding:24px 20px;
+  margin-top:40px;
 }
 
-/* BOTÓN WHATSAPP */
+/* TEXTO SEGURO (no corta palabras) */
+h1,h2,h3,p{
+  word-break:normal;
+  overflow-wrap:break-word;
+}
+
+/* WHATSAPP */
 .whatsapp{
   position:fixed;
   right:20px;
@@ -50,7 +85,7 @@ footer{
   display:flex;
   align-items:center;
   justify-content:center;
-  box-shadow:0 4px 10px rgba(0,0,0,.3);
+  box-shadow:0 4px 12px rgba(0,0,0,0.3);
   z-index:1000;
 }
 
@@ -71,7 +106,10 @@ footer{
 
 <section class="hero">
   <h2>Del origen natural<br>a tu mesa</h2>
-  <p>Seleccionamos semillas y granos de alta calidad respetando su esencia.</p>
+  <p>
+    Seleccionamos semillas y granos de alta calidad respetando su esencia
+    y la naturaleza.
+  </p>
 </section>
 
 <footer>
@@ -79,10 +117,13 @@ footer{
 </footer>
 
 <!-- WHATSAPP -->
-<a class="whatsapp"
-   href="https://wa.me/527702029080?text=Hola%20me%20gustaría%20recibir%20información"
-   target="_blank">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+<a
+  class="whatsapp"
+  href="https://wa.me/527702029080?text=Hola%20me%20gustaría%20recibir%20información"
+  target="_blank"
+  aria-label="WhatsApp Seed & Grano"
+>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
 </a>
 
 </body>
