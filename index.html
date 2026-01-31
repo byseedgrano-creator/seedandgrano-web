@@ -28,30 +28,33 @@
 
         footer { background: #2f3a1f; color: #ffffff; padding: 40px 20px; }
 
-        /* WHATSAPP FLOTANTE CORREGIDO */
+        /* --- BOTÓN WHATSAPP PROFESIONAL CORREGIDO --- */
         .whatsapp {
             position: fixed;
             right: 20px;
             bottom: 20px;
-            width: 60px;
-            height: 60px;
+            width: 65px;
+            height: 65px;
             background: #25d366;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             z-index: 1000;
             transition: transform 0.3s ease;
-            text-decoration: none;
+            text-decoration: none; /* Elimina cualquier subrayado azul */
+            overflow: hidden; /* Asegura que nada salga del círculo */
         }
+        
         .whatsapp:hover { transform: scale(1.1); }
         
-        /* Ajuste de la miniatura dentro del botón */
+        /* Ajuste exacto para la miniatura del logo */
         .whatsapp img {
-            width: 35px; 
-            height: 35px;
-            display: block;
+            width: 40px; 
+            height: 40px;
+            object-fit: contain; /* Evita que se deforme */
+            filter: drop-shadow(0px 0px 0px transparent); /* Limpia bordes extraños */
         }
     </style>
 </head>
@@ -72,12 +75,12 @@
         <p>© 2026 Seed & Grano</p>
     </footer>
 
-    <!-- BOTÓN WHATSAPP CON ENLACE Y MINIATURA CORREGIDOS -->
+    <!-- BOTÓN WHATSAPP TOTALMENTE LIMPIO -->
     <a class="whatsapp" 
        href="https://wa.me" 
        target="_blank" 
        rel="noopener">
-        <img src="https://upload.wikimedia.org" alt="WhatsApp Icon">
+        <img src="https://upload.wikimedia.org" alt="">
     </a>
 
 </body>
