@@ -10,19 +10,16 @@
         body { background: #f9f9f6; color: #2f2f2f; text-align: center; line-height: 1.6; }
         header { padding: 32px 20px; background: #ffffff; }
         header h1 { color: #5a7a2c; font-size: 2rem; }
-        header p { color: #666; font-size: 1rem; }
-        
         .hero {
             background: linear-gradient(rgba(90,122,44,0.7), rgba(90,122,44,0.7)),
                         url("fondo.jpg") center/cover no-repeat;
-            color: #ffffff; padding: 60px 20px; min-height: 450px;
+            color: #ffffff; padding: 80px 20px; min-height: 450px;
             display: flex; flex-direction: column; justify-content: center; align-items: center;
         }
         .hero h2 { font-size: 2.5rem; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
-        
         footer { background: #1a2413; color: #ffffff; padding: 40px 20px; }
 
-        /* BOTÓN WHATSAPP CON NÚMERO CORREGIDO */
+        /* BOTÓN WHATSAPP PROFESIONAL */
         .btn-whatsapp {
             position: fixed;
             right: 20px;
@@ -36,10 +33,9 @@
             justify-content: center;
             box-shadow: 0 4px 15px rgba(0,0,0,0.4);
             z-index: 1000;
-            transition: transform 0.3s ease;
             text-decoration: none;
         }
-        .btn-whatsapp svg { width: 38px; height: 38px; fill: white; }
+        .btn-whatsapp svg { width: 36px; height: 36px; fill: white; }
     </style>
 </head>
 <body>
@@ -58,8 +54,8 @@
         <p>© 2026 Seed & Grano</p>
     </footer>
 
-    <!-- ENLACE CON TU NÚMERO: 527702029080 -->
-    <a href="https://wa.me" 
+    <!-- ENLACE USANDO LA API OFICIAL (MÁS ESTABLE) -->
+    <a href="https://api.whatsapp.com" 
        class="btn-whatsapp" 
        target="_blank">
         <svg viewBox="0 0 448 512" xmlns="http://www.w3.org">
