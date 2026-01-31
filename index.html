@@ -41,9 +41,14 @@ header p{
   font-size:1.1rem;
 }
 
-/* HERO */
+/* HERO CON IMAGEN */
 .hero{
-  background:#9fb57c;
+  background:
+    linear-gradient(
+      rgba(90,122,44,0.6),
+      rgba(90,122,44,0.6)
+    ),
+    url("fondo.jpg") center/cover no-repeat;
   color:#ffffff;
   padding:64px 20px;
 }
@@ -67,8 +72,8 @@ footer{
   margin-top:40px;
 }
 
-/* TEXTO SEGURO (no corta palabras) */
-h1,h2,h3,p{
+/* EVITA CORTES DE TEXTO */
+h1,h2,p{
   word-break:normal;
   overflow-wrap:break-word;
 }
@@ -116,7 +121,6 @@ h1,h2,h3,p{
   <p>© 2026 Seed & Grano</p>
 </footer>
 
-<!-- WHATSAPP -->
 <a
   class="whatsapp"
   href="https://wa.me/527702029080?text=Hola%20me%20gustaría%20recibir%20información"
