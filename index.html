@@ -1,134 +1,53 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Seed & Grano</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO BÁSICO: Esto te posiciona en Google -->
+    <title>Seed & Grano | Semillas y Productos Naturales de Calidad</title>
+    <meta name="description" content="En Seed & Grano ofrecemos la mejor selección de granos y semillas naturales para una alimentación saludable. Calidad premium directa a tu mesa.">
+    <meta name="keywords" content="semillas, granos, alimentación saludable, natural, nutrición, seed and grano">
+    <link rel="canonical" href="https://seedandgrano-web.vercel.app">
 
-<style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family: Arial, sans-serif;
-}
+    <!-- OPEN GRAPH: Para que se vea profesional en WhatsApp e Instagram -->
+    <meta property="og:title" content="Seed & Grano - Calidad Natural">
+    <meta property="og:description" content="Descubre nuestra selección premium de granos y semillas. ¡Visítanos!">
+    <meta property="og:image" content="https://seedandgrano-web.vercel.app">
+    <meta property="og:url" content="https://seedandgrano-web.vercel.app">
+    <meta property="og:type" content="website">
 
-body{
-  background:#f9f9f6;
-  color:#2f2f2f;
-  text-align:center;
-  line-height:1.6;
-}
-
-/* HEADER */
-header{
-  padding:32px 20px;
-  background:#ffffff;
-}
-
-header img{
-  max-width:220px;
-  margin-bottom:16px;
-}
-
-header h1{
-  color:#5a7a2c;
-  font-size:2rem;
-}
-
-header p{
-  color:#666;
-  font-size:1.1rem;
-}
-
-/* HERO CON IMAGEN */
-.hero{
-  background:
-    linear-gradient(
-      rgba(90,122,44,0.6),
-      rgba(90,122,44,0.6)
-    ),
-    url("fondo.jpg") center/cover no-repeat;
-  color:#ffffff;
-  padding:64px 20px;
-}
-
-.hero h2{
-  font-size:2.3rem;
-  margin-bottom:20px;
-}
-
-.hero p{
-  font-size:1.2rem;
-  max-width:800px;
-  margin:0 auto;
-}
-
-/* FOOTER */
-footer{
-  background:#2f3a1f;
-  color:#ffffff;
-  padding:24px 20px;
-  margin-top:40px;
-}
-
-/* EVITA CORTES DE TEXTO */
-h1,h2,p{
-  word-break:normal;
-  overflow-wrap:break-word;
-}
-
-/* WHATSAPP */
-.whatsapp{
-  position:fixed;
-  right:20px;
-  bottom:20px;
-  width:60px;
-  height:60px;
-  background:#25d366;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  box-shadow:0 4px 12px rgba(0,0,0,0.3);
-  z-index:1000;
-}
-
-.whatsapp img{
-  width:32px;
-  height:32px;
-}
-</style>
+    <!-- ESTILOS RÁPIDOS (CSS): Sin necesidad de archivos extra -->
+    <style>
+        :root { --verde: #2d5a27; --crema: #fdfaf5; --texto: #333; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--crema); color: var(--texto); margin: 0; display: flex; flex-direction: column; min-height: 100vh; }
+        header { background-color: var(--verde); color: white; padding: 2rem; text-align: center; }
+        main { flex: 1; padding: 2rem; max-width: 800px; margin: 0 auto; text-align: center; }
+        .producto-card { background: white; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); margin-top: 1rem; }
+        footer { background: #eee; padding: 1rem; text-align: center; font-size: 0.9rem; }
+        .boton { background-color: var(--verde); color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; margin-top: 10px; }
+    </style>
 </head>
-
 <body>
 
-<header>
-  <img src="logo.png" alt="Seed & Grano">
-  <h1>Seed & Grano</h1>
-  <p>Semillas naturales & granos seleccionados</p>
-</header>
+    <header>
+        <h1>Seed & Grano</h1>
+        <p>Nutrición honesta desde la tierra</p>
+    </header>
 
-<section class="hero">
-  <h2>Del origen natural<br>a tu mesa</h2>
-  <p>
-    Seleccionamos semillas y granos de alta calidad respetando su esencia
-    y la naturaleza.
-  </p>
-</section>
+    <main>
+        <div class="producto-card">
+            <h2>Nuestra Selección Premium</h2>
+            <p>Estamos trabajando para traerte el catálogo más completo de semillas, frutos secos y granos integrales.</p>
+            <p><strong>Próximamente: Tienda en Línea</strong></p>
+            <a href="mailto:tu-correo@ejemplo.com" class="boton">Contactar para Pedidos</a>
+        </div>
+    </main>
 
-<footer>
-  <p>© 2026 Seed & Grano</p>
-</footer>
-
-<a
-  class="whatsapp"
-  href="https://wa.me/527702029080?text=Hola%20me%20gustaría%20recibir%20información"
-  target="_blank"
-  aria-label="WhatsApp Seed & Grano"
->
-  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-</a>
+    <footer>
+        <p>&copy; 2026 Seed & Grano - Todos los derechos reservados.</p>
+        <p>Desplegado en <a href="https://vercel.com" target="_blank" rel="noopener">Vercel</a></p>
+    </footer>
 
 </body>
 </html>
