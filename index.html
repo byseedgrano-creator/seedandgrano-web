@@ -3,42 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="7E9Oyv2GjLA-40FT2ym0-rnbEPyIaK_SH8hXLPeqNGI" />
-    <title>Seed & Grano | Semillas y Granos Naturales</title>
+    <meta name="google-site-verification" content="5EKPEW-zi9LMTfIFiOpEnhOqBt7FdLk_tWWJimsSLxY" />
+    <title>Seed & Grano | Alimentación Consciente y Pura</title>
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
-        body { background: #f9f9f6; color: #2f2f2f; text-align: center; line-height: 1.6; }
-        header { padding: 32px 20px; background: #ffffff; border-bottom: 1px solid #eee; }
-        header h1 { color: #5a7a2c; font-size: 2rem; }
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+        body { background: #fdfaf5; color: #333; line-height: 1.6; }
+        
+        /* HEADER Y HERO */
+        header { padding: 30px; background: white; text-align: center; border-bottom: 2px solid #5a7a2c; }
+        header h1 { color: #5a7a2c; font-size: 2.2rem; }
         .hero {
-            background: linear-gradient(rgba(90,122,44,0.7), rgba(90,122,44,0.7)),
-                        url("fondo.jpg") center/cover no-repeat;
-            color: #ffffff; padding: 80px 20px; min-height: 450px;
-            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("https://images.unsplash.com") center/cover;
+            color: white; padding: 80px 20px; text-align: center;
         }
-        .hero h2 { font-size: 2.5rem; margin-bottom: 20px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
-        footer { background: #2f3a1f; color: #ffffff; padding: 40px 20px; }
-        .whatsapp {
-            position: fixed; right: 20px; bottom: 20px; width: 65px; height: 65px;
-            background: #25d366; border-radius: 50%; display: flex;
-            align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.4);
-            z-index: 1000; text-decoration: none;
-        }
-        .whatsapp svg { width: 35px; height: 35px; fill: white; }
+
+        /* SECCIONES DE TEXTO */
+        section { padding: 50px 20px; max-width: 900px; margin: 0 auto; }
+        .titulo-seccion { color: #5a7a2c; margin-bottom: 20px; font-size: 1.8rem; text-align: center; }
+        .cuadro-texto { background: white; padding: 30px; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.05); margin-bottom: 30px; }
+
+        /* PRODUCTOS */
+        .contenedor-productos { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; padding: 20px; }
+        .producto-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); border: 1px solid #eee; display: flex; flex-direction: column; }
+        .producto-card img { width: 100%; height: 220px; object-fit: cover; }
+        .btn-comprar { display: block; background: #5a7a2c; color: white; padding: 12px; text-decoration: none; border-radius: 8px; font-weight: bold; margin: 20px; text-align: center; }
+
+        /* LISTA DE COMPROMISO */
+        .lista-calidad { list-style: none; padding: 0; }
+        .lista-calidad li { margin-bottom: 15px; padding-left: 30px; position: relative; }
+        .lista-calidad li::before { content: "✓"; position: absolute; left: 0; color: #5a7a2c; font-weight: bold; }
+
+        footer { background: #2f3a1f; color: white; padding: 40px 20px; text-align: center; }
+        .whatsapp-float { position: fixed; right: 20px; bottom: 20px; width: 60px; height: 60px; background: #25d366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.4); z-index: 1000; }
     </style>
 </head>
 <body>
+
     <header>
         <h1>Seed & Grano</h1>
-        <p>Semillas naturales & granos seleccionados</p>
+        <p>Nutrición honesta desde la tierra</p>
     </header>
+
     <section class="hero">
-        <h2>Del origen natural<br>a tu mesa</h2>
-        <p>Seleccionamos semillas y granos de alta calidad respetando su esencia y la naturaleza.</p>
+        <h2>Del origen natural a tu mesa</h2>
+        <p>Transformamos la riqueza de la tierra en salud para ti.</p>
     </section>
-    <footer><p>© 2026 Seed & Grano</p></footer>
-    <a class="whatsapp" href="https://wa.me" target="_blank" rel="noopener">
-        <svg viewBox="0 0 448 512"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.1 0-65.6-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.3-16.4-14.6-27.4-32.7-30.7-38.2-3.2-5.6-.4-8.6 2.4-11.4 2.6-2.5 5.5-6.5 8.3-9.8 2.8-3.3 3.7-5.6 5.5-9.3 1.8-3.7.9-6.9-.5-9.8-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.7 23.5 9.2 31.6 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.5 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg>
+
+    <!-- PRODUCTOS -->
+    <section>
+        <h2 class="titulo-seccion">Nuestro Catálogo</h2>
+        <div class="contenedor-productos">
+            <div class="producto-card">
+                <img src="https://images.unsplash.com" alt="Granola Artesanal">
+                <div style="padding:20px;"><h3>Granola Artesanal</h3><p>Mezcla crujiente de avena integral y frutos secos.</p></div>
+                <a href="https://wa.me" class="btn-comprar" target="_blank">Pedir por WhatsApp</a>
+            </div>
+            <div class="producto-card">
+                <img src="https://images.unsplash.com" alt="Semillas Nativas">
+                <div style="padding:20px;"><h3>Semillas Nativas</h3><p>Granos ancestrales de integridad nutricional pura.</p></div>
+                <a href="https://wa.me" class="btn-comprar" target="_blank">Pedir por WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE NOSOTROS -->
+    <section>
+        <div class="cuadro-texto">
+            <h2 class="titulo-seccion">Nuestra Misión</h2>
+            <p>Transformar la riqueza de la tierra en productos excepcionales, garantizando que cada semilla y grano mantenga su integridad nutricional a través de procesos sostenibles y transparentes.</p>
+        </div>
+
+        <div class="cuadro-texto">
+            <h2 class="titulo-seccion">Nuestra Visión</h2>
+            <p>Ser el referente global en la transformación de granos y frutos, liderando la industria mediante la innovación en el tratamiento del germen y la semilla, promoviendo una alimentación consciente y pura.</p>
+        </div>
+    </section>
+
+    <!-- COMPROMISO -->
+    <section style="background: #fff; border-radius: 15px; margin-bottom: 50px;">
+        <h2 class="titulo-seccion">Compromiso con la Calidad</h2>
+        <p style="margin-bottom: 20px; text-align: center;">Supervisamos cada fase del proceso para asegurar una norma innegociable:</p>
+        <ul class="lista-calidad">
+            <li><strong>Trazabilidad:</strong> Conocemos el origen exacto de cada lote.</li>
+            <li><strong>Tecnología de Punta:</strong> Aplicamos técnicas que protegen los aceites esenciales y nutrientes.</li>
+            <li><strong>Pureza Garantizada:</strong> Controles rigurosos para asegurar productos libres de contaminantes y con sabor natural.</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>© 2026 Seed & Grano - Alimentación Consciente</p>
+    </footer>
+
+    <a class="whatsapp-float" href="https://wa.me" target="_blank">
+        <svg viewBox="0 0 448 512" width="32" fill="white"><path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.1 0-65.6-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-5.5-2.8-23.2-8.5-44.2-27.3-16.4-14.6-27.4-32.7-30.7-38.2-3.2-5.6-.4-8.6 2.4-11.4 2.6-2.5 5.5-6.5 8.3-9.8 2.8-3.3 3.7-5.6 5.5-9.3 1.8-3.7.9-6.9-.5-9.8-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 13.2 5.7 23.5 9.2 31.6 11.8 13.3 4.2 25.4 3.6 35 2.2 10.7-1.5 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"></path></svg>
     </a>
+
 </body>
 </html>
