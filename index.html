@@ -1,176 +1,89 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Seed & Grano | Semillas Naturales</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seed & Grano</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
+<style>
+body{
+  margin:0;
+  font-family: Arial, sans-serif;
+  background:#f9f9f6;
+  color:#2f2f2f;
+  text-align:center;
+}
 
-    body {
-      background-color: #f9f9f6;
-      color: #2f2f2f;
-      line-height: 1.6;
-    }
+header{
+  padding:30px 20px;
+}
 
-    header {
-      padding: 2rem;
-      text-align: center;
-      background-color: #ffffff;
-    }
+header img{
+  max-width:200px;
+}
 
-    header img {
-      max-width: 200px;
-      margin-bottom: 1rem;
-    }
+h1{
+  color:#5a7a2c;
+}
 
-    header h1 {
-      color: #5a7a2c;
-      font-size: 2rem;
-    }
+.hero{
+  background:#9fb57c;
+  color:#fff;
+  padding:60px 20px;
+}
 
-    header p {
-      color: #666;
-    }
+footer{
+  background:#2f3a1f;
+  color:#fff;
+  padding:20px;
+}
 
-    .hero {
-      padding: 4rem 2rem;
-      text-align: center;
-      background: linear-gradient(
-          rgba(90, 122, 44, 0.6),
-          rgba(90, 122, 44, 0.6)
-        ),
-        url("fondo.jpg") center/cover no-repeat;
-      color: #ffffff;
-    }
+/* BOTÓN WHATSAPP */
+.whatsapp{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  width:60px;
+  height:60px;
+  background:#25d366;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 4px 10px rgba(0,0,0,.3);
+  z-index:1000;
+}
 
-    .hero h2 {
-      font-size: 2.4rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      max-width: 700px;
-      margin: auto;
-      font-size: 1.2rem;
-    }
-
-    .section {
-      padding: 3rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .section h3 {
-      color: #5a7a2c;
-      margin-bottom: 1rem;
-      font-size: 1.8rem;
-    }
-
-    footer {
-      background-color: #2f3a1f;
-      color: #ffffff;
-      padding: 2rem;
-      text-align: center;
-      margin-top: 3rem;
-    }
-
-    footer img {
-      max-width: 120px;
-      margin-bottom: 1rem;
-    }
-
-    footer p {
-      font-size: 0.9rem;
-      color: #ddd;
-    }
-
-    /* WHATSAPP */
-    .whatsapp-float {
-      position: fixed;
-      bottom: 22px;
-      right: 22px;
-      width: 60px;
-      height: 60px;
-      background-color: #eef2e6;
-      border: 2px solid #5a7a2c;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);
-      z-index: 1000;
-      transition: transform 0.3s ease;
-    }
-
-    .whatsapp-float:hover {
-      transform: scale(1.1);
-    }
-
-    .whatsapp-float svg {
-      width: 32px;
-      height: 32px;
-    }
-  </style>
+.whatsapp img{
+  width:32px;
+  height:32px;
+}
+</style>
 </head>
 
 <body>
 
-  <header>
-    <img src="logo.png" alt="Seed & Grano">
-    <h1>Seed & Grano</h1>
-    <p>Semillas naturales & granos seleccionados</p>
-  </header>
+<header>
+  <img src="logo.png" alt="Seed & Grano">
+  <h1>Seed & Grano</h1>
+  <p>Semillas naturales & granos seleccionados</p>
+</header>
 
-  <section class="hero">
-    <h2>Del origen natural a tu mesa</h2>
-    <p>
-      Seleccionamos semillas y granos de alta calidad, respetando su origen,
-      su esencia y la naturaleza.
-    </p>
-  </section>
+<section class="hero">
+  <h2>Del origen natural<br>a tu mesa</h2>
+  <p>Seleccionamos semillas y granos de alta calidad respetando su esencia.</p>
+</section>
 
-  <section class="section">
-    <h3>Nuestra filosofía</h3>
-    <p>
-      Cada grano cuenta una historia. Trabajamos con procesos artesanales,
-      ofreciendo productos honestos, saludables y llenos de vida.
-    </p>
-  </section>
+<footer>
+  <p>© 2026 Seed & Grano</p>
+</footer>
 
-  <footer>
-    <img src="logo.png" alt="Seed & Grano">
-    <p>© 2026 Seed & Grano · Todos los derechos reservados</p>
-  </footer>
-
-  <!-- WHATSAPP -->
-  <a
-    href="https://wa.me/527702029080text=Hola%20me%20gustaría%20recibir%20información"
-    class="whatsapp-float"
-    target="_blank"
-    aria-label="WhatsApp Seed & Grano"
-  >
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-      <path fill="#5a7a2c"
-        d="M16 3C9.4 3 4 8.4 4 15c0 2.6.8 5 2.2 7L4 29l7.2-2.1
-        c1.9 1 4.1 1.6 6.6 1.6 6.6 0 12-5.4 12-12S22.6 3 16 3z"/>
-      <path fill="#ffffff"
-        d="M20.4 18.3c-.3-.2-1.8-.9-2-.9-.3 0-.5.2-.7.4-.2.2-.8.9-1
-        1.1-.2.2-.4.2-.7 0s-1.3-.5-2.5-1.6c-.9-.8-1.5-1.9-1.7-2.2
-        -.2-.3 0-.5.2-.7.2-.2.3-.4.5-.6.2-.2.2-.3.3-.5.1-.2
-        0-.4 0-.6 0-.2-.7-1.7-1-2.3-.3-.6-.6-.5-.8-.5h-.7
-        c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8 0 1.6 1.2 3.2
-        1.3 3.4.2.2 2.4 3.7 5.8 5.2.8.3 1.4.5 1.9.6.8.2
-        1.6.2 2.2.1.7-.1 2-.8 2.3-1.5.3-.7.3-1.3.2-1.5
-        -.1-.2-.3-.3-.6-.5z"/>
-    </svg>
-  </a>
+<!-- WHATSAPP -->
+<a class="whatsapp"
+   href="https://wa.me/527702029080?text=Hola%20me%20gustaría%20recibir%20información"
+   target="_blank">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg">
+</a>
 
 </body>
 </html>
