@@ -14,12 +14,12 @@
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; }
         body { background: #f9f9f6; color: #2f2f2f; text-align: center; line-height: 1.6; }
 
-        header { padding: 32px 20px; background: #ffffff; border-bottom: 1px solid #eee; }
+        header { padding: 32px 20px; background: #ffffff; }
         header img { max-width: 220px; margin-bottom: 16px; }
         header h1 { color: #5a7a2c; font-size: 2rem; }
 
         .hero {
-            background: linear-gradient(rgba(90,122,44,0.65), rgba(90,122,44,0.65)),
+            background: linear-gradient(rgba(90,122,44,0.7), rgba(90,122,44,0.7)),
                         url("fondo.jpg") center/cover no-repeat;
             color: #ffffff; padding: 80px 20px; min-height: 450px;
             display: flex; flex-direction: column; justify-content: center; align-items: center;
@@ -29,32 +29,31 @@
         footer { background: #2f3a1f; color: #ffffff; padding: 40px 20px; }
 
         /* --- BOTÓN WHATSAPP PROFESIONAL CORREGIDO --- */
-        .whatsapp {
+        .whatsapp-btn {
             position: fixed;
-            right: 20px;
-            bottom: 20px;
+            right: 25px;
+            bottom: 25px;
             width: 65px;
             height: 65px;
-            background: #25d366;
+            background-color: #25d366;
+            color: white;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
             z-index: 1000;
-            transition: transform 0.3s ease;
-            text-decoration: none; /* Elimina cualquier subrayado azul */
-            overflow: hidden; /* Asegura que nada salga del círculo */
+            transition: all 0.3s ease;
+            text-decoration: none;
         }
         
-        .whatsapp:hover { transform: scale(1.1); }
+        .whatsapp-btn:hover { transform: scale(1.1); }
         
-        /* Ajuste exacto para la miniatura del logo */
-        .whatsapp img {
-            width: 40px; 
-            height: 40px;
-            object-fit: contain; /* Evita que se deforme */
-            filter: drop-shadow(0px 0px 0px transparent); /* Limpia bordes extraños */
+        /* Logo SVG para que nunca falle la carga */
+        .whatsapp-btn svg {
+            width: 38px;
+            height: 38px;
+            fill: white;
         }
     </style>
 </head>
@@ -75,12 +74,14 @@
         <p>© 2026 Seed & Grano</p>
     </footer>
 
-    <!-- BOTÓN WHATSAPP TOTALMENTE LIMPIO -->
-    <a class="whatsapp" 
-       href="https://wa.me" 
+    <!-- BOTÓN WHATSAPP CON LOGO INTEGRADO (SVG) -->
+    <a href="#" 
+       class="whatsapp-btn" 
        target="_blank" 
        rel="noopener">
-        <img src="https://upload.wikimedia.org" alt="">
+        <svg viewBox="0 0 32 32">
+            <path d="M16 0c-8.837 0-16 7.163-16 16 0 2.825 0.733 5.48 2.01 7.79l-2.01 7.21 7.387-1.937c2.207 1.107 4.7 1.737 7.34 1.737 8.837 0 16-7.163 16-16s-7.163-16-16-16zM16 29.333c-2.393 0-4.633-0.613-6.587-1.687l-0.473-0.26-4.373 1.147 1.167-4.187-0.287-0.453c-1.22-1.947-1.927-4.24-1.927-6.693 0-7.36 5.973-13.333 13.333-13.333s13.333 5.973 13.333 13.333-5.973 13.333-13.333 13.333zM22.513 18.9c-0.353-0.18-2.1-1.033-2.42-1.153s-0.553-0.18-0.787 0.18c-0.233 0.353-0.907 1.153-1.113 1.38s-0.413 0.253-0.767 0.073c-0.353-0.18-1.487-0.547-2.833-1.753-1.047-0.933-1.753-2.087-1.96-2.44s-0.020-0.54 0.153-0.713c0.16-0.153 0.353-0.413 0.533-0.62s0.233-0.353 0.353-0.587c0.113-0.233 0.053-0.44-0.027-0.613s-0.787-1.9-1.080-2.613c-0.287-0.693-0.58-0.6-0.787-0.613s-0.44-0.013-0.673-0.013c-0.233 0-0.613 0.087-0.933 0.44s-1.22 1.193-1.22 2.913c0 1.72 1.253 3.38 1.427 3.613s2.46 3.753 5.96 5.267c0.833 0.36 1.48 0.573 1.987 0.733 0.833 0.267 1.593 0.227 2.193 0.14 0.667-0.1 2.1-0.86 2.393-1.687s0.293-1.54 0.207-1.687c-0.087-0.147-0.327-0.233-0.68-0.413z"></path>
+        </svg>
     </a>
 
 </body>
