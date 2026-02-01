@@ -1,140 +1,174 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Seed & Grano | Alimentos Naturales Premium</title>
+<title>Seed & Grano Corporation</title>
 
-<meta name="description" content="Seed & Grano - Granola artesanal y semillas nativas premium. Compra natural y saludable.">
-<meta name="keywords" content="granola artesanal, semillas naturales, superfoods, Seed & Grano">
-<meta name="author" content="Seed & Grano">
+<!-- SEO -->
+<meta name="description" content="Seed & Grano Corporation - AI Lifestyle & Premium Natural Products Startup">
+<meta name="keywords" content="Seed & Grano, AI startup, granola premium, semillas naturales, ecommerce">
+<meta name="author" content="Seed & Grano Corporation">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Seed & Grano Corporation">
+<meta property="og:description" content="AI Lifestyle & Premium Natural Products">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://seedandgrano-web.vercel.app">
+
+<link rel="icon" href="logo.png">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
-body{background:#f8f6f2;color:#333;}
-
-header{
-display:flex;align-items:center;justify-content:space-between;
-padding:15px 40px;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.05);
-position:sticky;top:0;z-index:1000;
-}
-header img{height:60px;}
-header h1{color:#5a7a2c;font-size:1.6rem;}
-
-.hero{
-background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url("fondo.jpg") center/cover;
-color:#fff;text-align:center;padding:100px 20px;
-}
-.hero h2{font-size:2.3rem;}
-.hero p{font-size:1.2rem;margin-top:10px;}
-
-.btn-main{
-display:inline-block;background:#5a7a2c;color:#fff;padding:14px 28px;
-border-radius:30px;text-decoration:none;font-weight:bold;margin-top:20px;
-}
-
-section{max-width:1100px;margin:auto;padding:50px 20px;}
-
-.productos{
-display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;
-}
-
-.card{
-background:#fff;border-radius:20px;overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-transition:.3s;
-}
-.card:hover{transform:translateY(-5px);}
-.card img{width:100%;height:220px;object-fit:cover;}
-.card div{padding:20px;}
-.card h3{color:#5a7a2c;margin-bottom:10px;}
-
-.btn{
-display:block;background:#5a7a2c;color:#fff;text-align:center;padding:12px;
-border-radius:10px;text-decoration:none;font-weight:bold;
-}
-
-.beneficios{
-display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;
-text-align:center;
-}
-.beneficio{
-background:#fff;padding:25px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,.05);
-}
-
-footer{
-background:#2f3a1f;color:#fff;text-align:center;padding:30px;
-}
-
-.whatsapp-float{
-position:fixed;right:20px;bottom:20px;width:65px;height:65px;
-background:#25d366;border-radius:50%;
-display:flex;align-items:center;justify-content:center;
-box-shadow:0 5px 20px rgba(0,0,0,.4);z-index:999;
-}
-.whatsapp-float img{width:35px;}
+body {font-family: Arial, sans-serif;margin:0;background:#0b0f1a;color:white;}
+header {padding:60px;text-align:center;background:#111726;}
+header h1 {font-size:40px;}
+section {padding:40px;}
+.products {display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+.card {background:#161d2e;padding:20px;border-radius:14px;box-shadow:0 0 10px rgba(0,0,0,.4);}
+button {padding:12px 20px;border:none;border-radius:8px;background:#00d4ff;color:black;font-weight:bold;cursor:pointer;}
+button:hover {background:#00a8cc;}
+#cart {position:fixed;right:0;top:0;width:320px;height:100%;background:#0e1422;padding:20px;overflow:auto;box-shadow:-5px 0 15px black;}
+input,select {padding:10px;border-radius:8px;border:none;width:100%;margin-top:8px;}
+footer {text-align:center;padding:20px;background:#111;}
+.whatsapp {position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:14px;border-radius:50%;font-size:22px;text-decoration:none;}
+.social {position:fixed;bottom:20px;left:20px;}
+.social a {margin-right:10px;color:white;font-size:20px;text-decoration:none;}
 </style>
 </head>
 
 <body>
 
 <header>
-<img src="logo.png">
-<h1>Seed & Grano</h1>
+<h1>Seed & Grano Corporation</h1>
+<p>AI Lifestyle & Premium Natural Products Startup</p>
 </header>
 
-<div class="hero">
-<h2>Nutrición pura desde la tierra</h2>
-<p>Granola artesanal y semillas premium para una vida saludable</p>
-<a class="btn-main" href="https://wa.me/52527702029080?text=Hola%20quiero%20comprar%20Seed%20y%20Grano" target="_blank">
-Comprar por WhatsApp
-</a>
-</div>
-
 <section>
-<h2 style="text-align:center;color:#5a7a2c;margin-bottom:30px;">Nuestro Catálogo Premium</h2>
-
-<div class="productos">
+<h2>Products</h2>
+<div class="products">
 
 <div class="card">
-<img src="fondo.jpg">
-<div>
-<h3>Granola Artesanal</h3>
-<p>Mezcla crujiente de avena integral, frutos secos y miel natural.</p>
-</div>
-<a class="btn" href="https://wa.me/52527702029080?text=Quiero%20Granola%20Artesanal" target="_blank">Comprar</a>
+<h3>Granola Premium</h3>
+<p id="price1"></p>
+<button onclick="addToCart('Granola Premium', prices.p1)">Add to Cart</button>
 </div>
 
 <div class="card">
-<img src="fondo.jpg">
-<div>
-<h3>Semillas Nativas</h3>
-<p>Granos ancestrales ricos en nutrientes esenciales.</p>
-</div>
-<a class="btn" href="https://wa.me/52527702029080?text=Quiero%20Semillas%20Nativas" target="_blank">Comprar</a>
+<h3>Native Seeds Mix</h3>
+<p id="price2"></p>
+<button onclick="addToCart('Native Seeds Mix', prices.p2)">Add to Cart</button>
 </div>
 
 </div>
 </section>
 
-<section>
-<h2 style="text-align:center;color:#5a7a2c;margin-bottom:30px;">¿Por qué Seed & Grano?</h2>
+<!-- CART -->
+<div id="cart">
+<h3>🛒 Cart</h3>
+<div id="cartItems"></div>
+<p id="shippingCost">Shipping: $0</p>
+<h3 id="total"></h3>
 
-<div class="beneficios">
-<div class="beneficio">🌱 100% Natural y sin químicos</div>
-<div class="beneficio">🔬 Procesos que conservan nutrientes</div>
-<div class="beneficio">📦 Empaque eco-friendly</div>
-<div class="beneficio">🚚 Envíos rápidos</div>
+<select id="city" onchange="calculateShipping()">
+<option>Select City</option>
+<option>CDMX</option>
+<option>Guadalajara</option>
+<option>Monterrey</option>
+<option>Other</option>
+</select>
+
+<input id="zip" placeholder="ZIP / Código Postal" oninput="calculateShipping()">
+
+<br><br>
+<button onclick="checkout()">Pay with Mercado Pago</button>
 </div>
-</section>
+
+<!-- ADMIN BUTTON -->
+<button onclick="openAdmin()" style="position:fixed;top:10px;right:10px;background:black;color:white;padding:6px;border-radius:6px;">ADMIN</button>
+
+<!-- ADMIN PANEL -->
+<div id="adminPanel" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:black;color:white;padding:40px;z-index:999;">
+<h2>Seed & Grano Admin Panel</h2>
+Product 1 Price: <input id="p1" type="number"><br><br>
+Product 2 Price: <input id="p2" type="number"><br><br>
+<button onclick="savePrices()">Save</button>
+<button onclick="closeAdmin()">Close</button>
+</div>
+
+<!-- SOCIAL -->
+<a class="whatsapp" href="https://wa.me/5210000000000" target="_blank">💬</a>
+<div class="social">
+<a href="https://instagram.com/" target="_blank">📸</a>
+<a href="https://facebook.com/" target="_blank">📘</a>
+</div>
 
 <footer>
-<p>© 2026 Seed & Grano | Alimentación Consciente Premium</p>
+© 2026 Seed & Grano Corporation
 </footer>
 
-<a class="whatsapp-float" href="https://wa.me/52527702029080" target="_blank">
-<img src="logo.png">
-</a>
+<script>
+// CART
+let cart = [];
+let shipping = 0;
+
+// PRICES ADMIN
+let prices = JSON.parse(localStorage.getItem("prices")) || {p1:120, p2:95};
+document.getElementById("price1").innerText = "$"+prices.p1+" MXN";
+document.getElementById("price2").innerText = "$"+prices.p2+" MXN";
+
+function addToCart(name, price){
+cart.push({name,price});
+renderCart();
+}
+
+function renderCart(){
+let html="";
+let total=0;
+cart.forEach(p=>{
+html+=`<p>${p.name} - $${p.price}</p>`;
+total+=p.price;
+});
+total+=shipping;
+document.getElementById("cartItems").innerHTML=html;
+document.getElementById("total").innerText="TOTAL: $"+total+" MXN";
+}
+
+// SHIPPING AI
+function calculateShipping(){
+let zip=document.getElementById("zip").value;
+shipping=0;
+if(zip>=1000 && zip<=16999) shipping=50;
+else if(zip>=44100 && zip<=44999) shipping=80;
+else if(zip>=64000 && zip<=64999) shipping=90;
+else if(zip.length>=5) shipping=120;
+document.getElementById("shippingCost").innerText="Shipping: $"+shipping+" MXN";
+renderCart();
+}
+
+// MERCADO PAGO CHECKOUT
+function checkout(){
+let total = cart.reduce((s,p)=>s+p.price,0)+shipping;
+alert("Redirecting to Mercado Pago. Total: $"+total);
+window.open("https://www.mercadopago.com.mx/","_blank");
+}
+
+// ADMIN PANEL
+function openAdmin(){
+document.getElementById("adminPanel").style.display="block";
+document.getElementById("p1").value=prices.p1;
+document.getElementById("p2").value=prices.p2;
+}
+function closeAdmin(){
+document.getElementById("adminPanel").style.display="none";
+}
+function savePrices(){
+prices.p1=parseFloat(document.getElementById("p1").value);
+prices.p2=parseFloat(document.getElementById("p2").value);
+localStorage.setItem("prices", JSON.stringify(prices));
+alert("Saved");
+location.reload();
+}
+</script>
 
 </body>
 </html>
