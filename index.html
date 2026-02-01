@@ -1,38 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Seed & Grano Corporation</title>
 
 <!-- SEO -->
-<meta name="description" content="Seed & Grano Corporation - AI Lifestyle & Premium Natural Products Startup">
-<meta name="keywords" content="Seed & Grano, AI startup, granola premium, semillas naturales, ecommerce">
+<meta name="description" content="Seed & Grano Corporation - Premium Natural Seeds & Granola Startup">
+<meta name="keywords" content="granola premium, semillas naturales, ecommerce, Seed & Grano">
 <meta name="author" content="Seed & Grano Corporation">
 
 <!-- Open Graph -->
 <meta property="og:title" content="Seed & Grano Corporation">
-<meta property="og:description" content="AI Lifestyle & Premium Natural Products">
+<meta property="og:description" content="Premium Natural Products & AI Lifestyle Startup">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://seedandgrano-web.vercel.app">
 
 <link rel="icon" href="logo.png">
 
 <style>
-body {font-family: Arial, sans-serif;margin:0;background:#0b0f1a;color:white;}
-header {padding:60px;text-align:center;background:#111726;}
-header h1 {font-size:40px;}
-section {padding:40px;}
-.products {display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
-.card {background:#161d2e;padding:20px;border-radius:14px;box-shadow:0 0 10px rgba(0,0,0,.4);}
-button {padding:12px 20px;border:none;border-radius:8px;background:#00d4ff;color:black;font-weight:bold;cursor:pointer;}
-button:hover {background:#00a8cc;}
-#cart {position:fixed;right:0;top:0;width:320px;height:100%;background:#0e1422;padding:20px;overflow:auto;box-shadow:-5px 0 15px black;}
-input,select {padding:10px;border-radius:8px;border:none;width:100%;margin-top:8px;}
-footer {text-align:center;padding:20px;background:#111;}
-.whatsapp {position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:14px;border-radius:50%;font-size:22px;text-decoration:none;}
-.social {position:fixed;bottom:20px;left:20px;}
-.social a {margin-right:10px;color:white;font-size:20px;text-decoration:none;}
+body{margin:0;font-family:Arial;background:#0f1c14;color:#eafff2;}
+header{background:linear-gradient(135deg,#0f3d2e,#1b5e20);padding:60px;text-align:center;}
+header h1{font-size:42px;margin:0;}
+header p{font-size:18px;opacity:.9;}
+
+section{padding:50px;}
+h2{color:#a5ffb0;}
+
+.products{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px;}
+.card{background:#14291e;padding:22px;border-radius:16px;box-shadow:0 0 18px rgba(0,0,0,.4);}
+.card img{width:100%;border-radius:12px;margin-bottom:12px;}
+.price{font-size:18px;color:#7CFF9D;font-weight:bold;}
+
+button{padding:12px;border:none;border-radius:8px;background:#2ecc71;color:black;font-weight:bold;cursor:pointer;}
+button:hover{background:#27ae60;}
+
+#cart{position:fixed;right:0;top:0;width:320px;height:100%;background:#0b1a12;padding:20px;overflow:auto;box-shadow:-6px 0 20px black;}
+#cart h3{color:#7CFF9D;}
+input,select{width:100%;padding:10px;border-radius:8px;border:none;margin-top:10px;}
+
+footer{text-align:center;padding:20px;background:#0a1410;color:#6cff9a;}
+
+.whatsapp{position:fixed;bottom:20px;right:20px;background:#25D366;color:white;padding:16px;border-radius:50%;font-size:22px;text-decoration:none;}
+.social{position:fixed;bottom:20px;left:20px;}
+.social a{color:white;font-size:22px;margin-right:12px;text-decoration:none;}
+
+/* MOBILE FIX */
+@media(max-width:768px){
+#cart{position:relative;width:100%;height:auto;box-shadow:none;}
+header{padding:30px;}
+header h1{font-size:26px;}
+.products{grid-template-columns:1fr;}
+button{width:100%;}
+}
 </style>
 </head>
 
@@ -40,22 +60,25 @@ footer {text-align:center;padding:20px;background:#111;}
 
 <header>
 <h1>Seed & Grano Corporation</h1>
-<p>AI Lifestyle & Premium Natural Products Startup</p>
+<p>Premium Natural Products Startup</p>
 </header>
 
 <section>
-<h2>Products</h2>
+<h2>🌱 Premium Products</h2>
+
 <div class="products">
 
 <div class="card">
-<h3>Granola Premium</h3>
-<p id="price1"></p>
+<img src="granola.jpg">
+<h3>Granola Premium Organic</h3>
+<p class="price" id="price1"></p>
 <button onclick="addToCart('Granola Premium', prices.p1)">Add to Cart</button>
 </div>
 
 <div class="card">
+<img src="seeds.jpg">
 <h3>Native Seeds Mix</h3>
-<p id="price2"></p>
+<p class="price" id="price2"></p>
 <button onclick="addToCart('Native Seeds Mix', prices.p2)">Add to Cart</button>
 </div>
 
@@ -77,16 +100,15 @@ footer {text-align:center;padding:20px;background:#111;}
 <option>Other</option>
 </select>
 
-<input id="zip" placeholder="ZIP / Código Postal" oninput="calculateShipping()">
+<input id="zip" placeholder="Código Postal" oninput="calculateShipping()">
 
 <br><br>
-<button onclick="checkout()">Pay with Mercado Pago</button>
+<button onclick="checkout()">Order via WhatsApp</button>
 </div>
 
-<!-- ADMIN BUTTON -->
+<!-- ADMIN -->
 <button onclick="openAdmin()" style="position:fixed;top:10px;right:10px;background:black;color:white;padding:6px;border-radius:6px;">ADMIN</button>
 
-<!-- ADMIN PANEL -->
 <div id="adminPanel" style="display:none;position:fixed;top:0;left:0;width:100%;height:100%;background:black;color:white;padding:40px;z-index:999;">
 <h2>Seed & Grano Admin Panel</h2>
 Product 1 Price: <input id="p1" type="number"><br><br>
@@ -96,27 +118,27 @@ Product 2 Price: <input id="p2" type="number"><br><br>
 </div>
 
 <!-- SOCIAL -->
-<a class="whatsapp" href="https://wa.me/5210000000000" target="_blank">💬</a>
+<a class="whatsapp" href="https://wa.me/521XXXXXXXXXX" target="_blank">💬</a>
 <div class="social">
-<a href="https://instagram.com/" target="_blank">📸</a>
-<a href="https://facebook.com/" target="_blank">📘</a>
+<a href="https://instagram.com/seedandgrano" target="_blank">📸</a>
+<a href="https://facebook.com/seedandgrano" target="_blank">📘</a>
 </div>
 
 <footer>
-© 2026 Seed & Grano Corporation
+© 2026 Seed & Grano Corporation – Natural Premium Brand
 </footer>
 
 <script>
 // CART
-let cart = [];
-let shipping = 0;
+let cart=[];
+let shipping=0;
 
-// PRICES ADMIN
-let prices = JSON.parse(localStorage.getItem("prices")) || {p1:120, p2:95};
-document.getElementById("price1").innerText = "$"+prices.p1+" MXN";
-document.getElementById("price2").innerText = "$"+prices.p2+" MXN";
+// PRICES
+let prices=JSON.parse(localStorage.getItem("prices"))||{p1:180,p2:140};
+document.getElementById("price1").innerText="$"+prices.p1+" MXN";
+document.getElementById("price2").innerText="$"+prices.p2+" MXN";
 
-function addToCart(name, price){
+function addToCart(name,price){
 cart.push({name,price});
 renderCart();
 }
@@ -124,13 +146,18 @@ renderCart();
 function renderCart(){
 let html="";
 let total=0;
-cart.forEach(p=>{
-html+=`<p>${p.name} - $${p.price}</p>`;
+cart.forEach((p,i)=>{
+html+=`<p>${p.name} - $${p.price} <span onclick="removeItem(${i})" style="cursor:pointer;color:red;">✖</span></p>`;
 total+=p.price;
 });
 total+=shipping;
 document.getElementById("cartItems").innerHTML=html;
 document.getElementById("total").innerText="TOTAL: $"+total+" MXN";
+}
+
+function removeItem(i){
+cart.splice(i,1);
+renderCart();
 }
 
 // SHIPPING AI
@@ -145,30 +172,11 @@ document.getElementById("shippingCost").innerText="Shipping: $"+shipping+" MXN";
 renderCart();
 }
 
-// MERCADO PAGO CHECKOUT
+// WHATSAPP CHECKOUT REAL
 function checkout(){
-let total = cart.reduce((s,p)=>s+p.price,0)+shipping;
-alert("Redirecting to Mercado Pago. Total: $"+total);
-window.open("https://www.mercadopago.com.mx/","_blank");
+if(cart.length==0){
+alert("Cart is empty");
+return;
 }
 
-// ADMIN PANEL
-function openAdmin(){
-document.getElementById("adminPanel").style.display="block";
-document.getElementById("p1").value=prices.p1;
-document.getElementById("p2").value=prices.p2;
-}
-function closeAdmin(){
-document.getElementById("adminPanel").style.display="none";
-}
-function savePrices(){
-prices.p1=parseFloat(document.getElementById("p1").value);
-prices.p2=parseFloat(document.getElementById("p2").value);
-localStorage.setItem("prices", JSON.stringify(prices));
-alert("Saved");
-location.reload();
-}
-</script>
-
-</body>
-</html>
+let city=document.getElemen
