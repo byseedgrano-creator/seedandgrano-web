@@ -1,141 +1,239 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Seed & Grano | Alimentos Naturales Premium</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO & METADATOS 2026 -->
+    <title>Seed & Grano | Granola Artesanal y Semillas Premium</title>
+    <meta name="description" content="Descubre la mejor granola artesanal y semillas nativas en Seed & Grano. Productos 100% naturales con envío rápido. ¡Compra salud desde la tierra!">
+    <meta name="author" content="Seed & Grano">
+    <meta name="google-site-verification" content="7E9Oyv2GjLA-40FT2ym0-rnbEPyIaK_SH8hXLPeqNGI" />
 
-<meta name="description" content="Seed & Grano - Granola artesanal y semillas nativas premium. Compra natural y saludable.">
-<meta name="keywords" content="granola artesanal, semillas naturales, superfoods, Seed & Grano">
-<meta name="author" content="Seed & Grano">
+    <!-- Open Graph para WhatsApp -->
+    <meta property="og:title" content="Seed & Grano | Nutrición Pura">
+    <meta property="og:description" content="Granola y semillas premium. Haz tu pedido y eleva tu alimentación.">
+    <meta property="og:image" content="fondo.jpg">
+    <meta property="og:url" content="https://seedandgrano-web.vercel.app">
 
-  <meta name="google-site-verification" content="7E9Oyv2GjLA-40FT2ym0-rnbEPyIaK_SH8hXLPeqNGI" />
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
-body{background:#f8f6f2;color:#333;}
+    <!-- Fuentes de Alta Gama -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com" rel="stylesheet">
 
-header{
-display:flex;align-items:center;justify-content:space-between;
-padding:15px 40px;background:#fff;box-shadow:0 2px 10px rgba(0,0,0,.05);
-position:sticky;top:0;z-index:1000;
-}
-header img{height:60px;}
-header h1{color:#5a7a2c;font-size:1.6rem;}
+    <style>
+        :root {
+            --verde-oliva: #4a5d4e;
+            --verde-claro: #5a7a2c;
+            --acento: #d4a373;
+            --crema: #fdfaf5;
+            --texto: #2d2d2d;
+            --blanco: #ffffff;
+        }
 
-.hero{
-background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),url("fondo.jpg") center/cover;
-color:#fff;text-align:center;padding:100px 20px;
-}
-.hero h2{font-size:2.3rem;}
-.hero p{font-size:1.2rem;margin-top:10px;}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        
+        body { 
+            background: var(--crema); 
+            color: var(--texto); 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
-.btn-main{
-display:inline-block;background:#5a7a2c;color:#fff;padding:14px 28px;
-border-radius:30px;text-decoration:none;font-weight:bold;margin-top:20px;
-}
+        /* NAVEGACIÓN */
+        header {
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 15px 5%; background: rgba(255,255,255,0.85);
+            backdrop-filter: blur(12px); position: sticky; top: 0; z-index: 1000;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
 
-section{max-width:1100px;margin:auto;padding:50px 20px;}
+        .logo-link { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+        header img { height: 50px; border-radius: 50%; }
+        header h1 { font-family: 'Playfair Display', serif; color: var(--verde-oliva); font-size: 1.4rem; }
 
-.productos{
-display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:25px;
-}
+        .nav-desk { display: flex; gap: 30px; list-style: none; }
+        .nav-desk a { text-decoration: none; color: var(--texto); font-weight: 500; font-size: 0.9rem; transition: 0.3s; }
+        .nav-desk a:hover { color: var(--acento); }
 
-.card{
-background:#fff;border-radius:20px;overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-transition:.3s;
-}
-.card:hover{transform:translateY(-5px);}
-.card img{width:100%;height:220px;object-fit:cover;}
-.card div{padding:20px;}
-.card h3{color:#5a7a2c;margin-bottom:10px;}
+        .menu-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
+        .menu-toggle span { width: 25px; height: 2px; background: var(--verde-oliva); transition: 0.3s; }
 
-.btn{
-display:block;background:#5a7a2c;color:#fff;text-align:center;padding:12px;
-border-radius:10px;text-decoration:none;font-weight:bold;
-}
+        /* MENÚ MÓVIL */
+        .mobile-overlay {
+            position: fixed; top: 0; right: -100%; width: 100%; height: 100vh;
+            background: var(--crema); display: flex; justify-content: center; align-items: center;
+            transition: 0.5s cubic-bezier(0.77,0.2,0.05,1); z-index: 1500;
+        }
+        .mobile-overlay.active { right: 0; }
+        .mobile-nav { list-style: none; text-align: center; }
+        .mobile-nav li { margin: 25px 0; }
+        .mobile-nav a { font-family: 'Playfair Display', serif; font-size: 2.2rem; text-decoration: none; color: var(--verde-oliva); }
 
-.beneficios{
-display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;
-text-align:center;
-}
-.beneficio{
-background:#fff;padding:25px;border-radius:15px;box-shadow:0 5px 15px rgba(0,0,0,.05);
-}
+        /* HERO */
+        .hero {
+            display: flex; align-items: center; justify-content: center;
+            min-height: 85vh; text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("fondo.jpg") center/cover no-repeat;
+            color: var(--blanco); padding: 40px 20px;
+        }
+        .hero h2 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 7vw, 4.5rem); margin-bottom: 20px; }
+        .hero p { font-size: 1.2rem; margin-bottom: 35px; max-width: 600px; margin: 0 auto 35px; opacity: 0.9; }
 
-footer{
-background:#2f3a1f;color:#fff;text-align:center;padding:30px;
-}
+        .btn-main {
+            display: inline-block; background: var(--acento); color: var(--blanco);
+            padding: 18px 40px; border-radius: 50px; text-decoration: none;
+            font-weight: bold; transition: 0.3s; box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .btn-main:hover { background: var(--verde-claro); transform: translateY(-3px); }
 
-.whatsapp-float{
-position:fixed;right:20px;bottom:20px;width:65px;height:65px;
-background:#25d366;border-radius:50%;
-display:flex;align-items:center;justify-content:center;
-box-shadow:0 5px 20px rgba(0,0,0,.4);z-index:999;
-}
-.whatsapp-float img{width:35px;}
-</style>
+        /* SECCIONES */
+        section { max-width: 1200px; margin: auto; padding: 90px 5%; }
+        .section-title { text-align: center; font-family: 'Playfair Display', serif; font-size: 2.8rem; color: var(--verde-oliva); margin-bottom: 60px; }
+
+        /* PRODUCTOS */
+        .productos { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .card { background: var(--blanco); border-radius: 30px; overflow: hidden; box-shadow: 0 15px 35px rgba(0,0,0,0.03); transition: 0.4s; border: 1px solid rgba(0,0,0,0.02); }
+        .card:hover { transform: translateY(-10px); box-shadow: 0 25px 50px rgba(0,0,0,0.1); }
+        .card img { width: 100%; height: 280px; object-fit: cover; }
+        .card-body { padding: 35px; }
+        .card h3 { font-family: 'Playfair Display', serif; color: var(--verde-oliva); font-size: 1.6rem; margin-bottom: 12px; }
+        .card p { color: #666; margin-bottom: 25px; font-size: 0.95rem; }
+        .btn-buy { display: block; background: var(--verde-oliva); color: var(--blanco); text-align: center; padding: 15px; border-radius: 15px; text-decoration: none; font-weight: 600; transition: 0.3s; }
+        .btn-buy:hover { background: var(--acento); }
+
+        /* NOSOTROS / VALORES */
+        .beneficios-container { background: #f4f1eb; border-radius: 50px; padding: 80px 5%; margin: 40px 5%; }
+        .beneficios { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; }
+        .beneficio { text-align: center; padding: 20px; }
+        .beneficio span { font-size: 2.5rem; display: block; margin-bottom: 15px; }
+        .beneficio h4 { font-family: 'Playfair Display', serif; color: var(--verde-oliva); font-size: 1.3rem; margin-bottom: 10px; }
+
+        /* FOOTER */
+        footer { background: #1a1f14; color: rgba(255,255,255,0.4); text-align: center; padding: 60px 20px; font-size: 0.85rem; }
+
+        /* WHATSAPP FLOAT */
+        .whatsapp-float {
+            position: fixed; right: 25px; bottom: 25px; width: 60px; height: 60px;
+            background: #25d366; border-radius: 50%; display: flex; align-items: center;
+            justify-content: center; box-shadow: 0 10px 25px rgba(37,211,102,0.3); z-index: 1100;
+            transition: 0.3s;
+        }
+        .whatsapp-float:hover { transform: scale(1.1); }
+        .whatsapp-float img { width: 32px; filter: brightness(0) invert(1); }
+
+        @media (max-width: 768px) {
+            .nav-desk { display: none; }
+            .menu-toggle { display: flex; }
+            .hero h2 { font-size: 2.8rem; }
+            .section-title { font-size: 2.2rem; }
+        }
+    </style>
 </head>
-
 <body>
 
 <header>
-<img src="logo.png">
-<h1>Seed & Grano</h1>
+    <a href="#" class="logo-link">
+        <img src="logo.png" alt="Seed & Grano">
+        <h1>Seed & Grano</h1>
+    </a>
+    <ul class="nav-desk">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="gracias.html">Contacto</a></li>
+    </ul>
+    <button class="menu-toggle" id="open-menu" aria-label="Menu">
+        <span></span><span></span><span></span>
+    </button>
 </header>
 
-<div class="hero">
-<h2>Nutrición pura desde la tierra</h2>
-<p>Granola artesanal y semillas premium para una vida saludable</p>
-<a class="btn-main" href="https://wa.me/52527702029080?text=Hola%20quiero%20comprar%20Seed%20y%20Grano" target="_blank">
-Comprar por WhatsApp
-</a>
+<div class="mobile-overlay" id="mobile-overlay">
+    <ul class="mobile-nav">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#productos">Productos</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="gracias.html">Contacto</a></li>
+    </ul>
 </div>
 
-<section>
-<h2 style="text-align:center;color:#5a7a2c;margin-bottom:30px;">Nuestro Catálogo Premium</h2>
+<main>
+    <section class="hero" id="inicio" style="max-width: 100%; padding: 0;">
+        <div class="hero-content">
+            <h2>Nutrición pura <br>desde la tierra</h2>
+            <p>Granola artesanal y semillas nativas premium para una vida saludable y consciente.</p>
+            <a class="btn-main" href="gracias.html">Comprar por WhatsApp</a>
+        </div>
+    </section>
 
-<div class="productos">
+    <section id="productos">
+        <h2 class="section-title">Nuestra Selección</h2>
+        <div class="productos">
+            <div class="card">
+                <img src="fondo.jpg" alt="Granola Artesanal">
+                <div class="card-body">
+                    <h3>Granola Artesanal</h3>
+                    <p>Mezcla crujiente de avena integral, frutos secos y miel de abeja 100% natural.</p>
+                    <a class="btn-buy" href="gracias.html">Pedir Ahora</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="fondo.jpg" alt="Semillas Nativas">
+                <div class="card-body">
+                    <h3>Semillas Nativas</h3>
+                    <p>Granos ancestrales puros, ricos en energía y nutrientes esenciales para tu día.</p>
+                    <a class="btn-buy" href="gracias.html">Pedir Ahora</a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<div class="card">
-<img src="fondo.jpg">
-<div>
-<h3>Granola Artesanal</h3>
-<p>Mezcla crujiente de avena integral, frutos secos y miel natural.</p>
-</div>
-<a class="btn" href="https://wa.me/52527702029080?text=Quiero%20Granola%20Artesanal" target="_blank">Comprar</a>
-</div>
-
-<div class="card">
-<img src="fondo.jpg">
-<div>
-<h3>Semillas Nativas</h3>
-<p>Granos ancestrales ricos en nutrientes esenciales.</p>
-</div>
-<a class="btn" href="https://wa.me/52527702029080?text=Quiero%20Semillas%20Nativas" target="_blank">Comprar</a>
-</div>
-
-</div>
-</section>
-
-<section>
-<h2 style="text-align:center;color:#5a7a2c;margin-bottom:30px;">¿Por qué Seed & Grano?</h2>
-
-<div class="beneficios">
-<div class="beneficio">🌱 100% Natural y sin químicos</div>
-<div class="beneficio">🔬 Procesos que conservan nutrientes</div>
-<div class="beneficio">📦 Empaque eco-friendly</div>
-<div class="beneficio">🚚 Envíos rápidos</div>
-</div>
-</section>
+    <div class="beneficios-container" id="nosotros">
+        <h2 class="section-title">El Sello Seed & Grano</h2>
+        <div class="beneficios">
+            <div class="beneficio">
+                <span>🌱</span>
+                <h4>Origen Natural</h4>
+                <p>Sin aditivos químicos ni procesos industriales agresivos.</p>
+            </div>
+            <div class="beneficio">
+                <span>🔬</span>
+                <h4>Calidad Premium</h4>
+                <p>Procesos artesanales que conservan cada nutriente intacto.</p>
+            </div>
+            <div class="beneficio">
+                <span>📦</span>
+                <h4>Eco-Friendly</h4>
+                <p>Comprometidos con empaques de bajo impacto ambiental.</p>
+            </div>
+        </div>
+    </div>
+</main>
 
 <footer>
-<p>© 2026 Seed & Grano | Alimentación Consciente Premium</p>
+    <p>© 2026 Seed & Grano | Alimentación Consciente Premium</p>
+    <p style="opacity: 0.5;">Hecho con pasión por la tierra.</p>
 </footer>
 
-<a class="whatsapp-float" href="https://wa.me/52527702029080" target="_blank">
-<img src="logo.png">
+<a class="whatsapp-float" href="gracias.html" aria-label="WhatsApp">
+    <img src="https://upload.wikimedia.org" alt="WA">
 </a>
+
+<script>
+    const menuBtn = document.getElementById('open-menu');
+    const overlay = document.getElementById('mobile-overlay');
+    const navLinks = document.querySelectorAll('.mobile-nav a');
+
+    function toggleMenu() {
+        overlay.classList.toggle('active');
+        document.body.style.overflow = overlay.classList.contains('active') ? 'hidden' : 'auto';
+    }
+
+    menuBtn.addEventListener('click', toggleMenu);
+    navLinks.forEach(l => l.addEventListener('click', toggleMenu));
+</script>
 
 </body>
 </html>
