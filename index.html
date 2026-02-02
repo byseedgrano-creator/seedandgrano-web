@@ -3,20 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO & METADATOS 2026 -->
-    <title>Seed & Grano | Granola Artesanal y Semillas Premium</title>
-    <meta name="description" content="Descubre la mejor granola artesanal y semillas nativas en Seed & Grano. Productos 100% naturales con envío rápido. ¡Compra salud desde la tierra!">
+    <title>Seed & Grano | Nutrición Pura desde la Tierra</title>
+
+    <!-- SEO & METADATOS -->
+    <meta name="description" content="Granola artesanal y semillas nativas premium. Calidad 100% natural para una vida consciente.">
     <meta name="author" content="Seed & Grano">
     <meta name="google-site-verification" content="7E9Oyv2GjLA-40FT2ym0-rnbEPyIaK_SH8hXLPeqNGI" />
 
-    <!-- Open Graph para WhatsApp -->
-    <meta property="og:title" content="Seed & Grano | Nutrición Pura">
-    <meta property="og:description" content="Granola y semillas premium. Haz tu pedido y eleva tu alimentación.">
-    <meta property="og:image" content="fondo.jpg">
-    <meta property="og:url" content="https://seedandgrano-web.vercel.app">
-
-    <!-- Fuentes de Alta Gama -->
+    <!-- Fuentes Premium -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com" rel="stylesheet">
@@ -61,7 +55,7 @@
         .menu-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; }
         .menu-toggle span { width: 25px; height: 2px; background: var(--verde-oliva); transition: 0.3s; }
 
-        /* MENÚ MÓVIL */
+        /* MENÚ MÓVIL OVERLAY */
         .mobile-overlay {
             position: fixed; top: 0; right: -100%; width: 100%; height: 100vh;
             background: var(--crema); display: flex; justify-content: center; align-items: center;
@@ -79,8 +73,9 @@
             background: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url("fondo.jpg") center/cover no-repeat;
             color: var(--blanco); padding: 40px 20px;
         }
-        .hero h2 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 7vw, 4.5rem); margin-bottom: 20px; }
-        .hero p { font-size: 1.2rem; margin-bottom: 35px; max-width: 600px; margin: 0 auto 35px; opacity: 0.9; }
+        .hero-content { max-width: 800px; }
+        .hero h2 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 7vw, 4.5rem); margin-bottom: 20px; line-height: 1.1; }
+        .hero p { font-size: 1.2rem; margin-bottom: 35px; opacity: 0.9; font-weight: 300; }
 
         .btn-main {
             display: inline-block; background: var(--acento); color: var(--blanco);
@@ -104,17 +99,17 @@
         .btn-buy { display: block; background: var(--verde-oliva); color: var(--blanco); text-align: center; padding: 15px; border-radius: 15px; text-decoration: none; font-weight: 600; transition: 0.3s; }
         .btn-buy:hover { background: var(--acento); }
 
-        /* NOSOTROS / VALORES */
+        /* BENEFICIOS */
         .beneficios-container { background: #f4f1eb; border-radius: 50px; padding: 80px 5%; margin: 40px 5%; }
         .beneficios { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; }
         .beneficio { text-align: center; padding: 20px; }
         .beneficio span { font-size: 2.5rem; display: block; margin-bottom: 15px; }
-        .beneficio h4 { font-family: 'Playfair Display', serif; color: var(--verde-oliva); font-size: 1.3rem; margin-bottom: 10px; }
+        .beneficio h4 { font-family: 'Playfair Display', serif; color: var(--verde-oliva); margin-bottom: 10px; }
 
         /* FOOTER */
         footer { background: #1a1f14; color: rgba(255,255,255,0.4); text-align: center; padding: 60px 20px; font-size: 0.85rem; }
 
-        /* WHATSAPP FLOAT */
+        /* WHATSAPP FLOTANTE */
         .whatsapp-float {
             position: fixed; right: 25px; bottom: 25px; width: 60px; height: 60px;
             background: #25d366; border-radius: 50%; display: flex; align-items: center;
@@ -127,6 +122,7 @@
         @media (max-width: 768px) {
             .nav-desk { display: none; }
             .menu-toggle { display: flex; }
+            header { padding: 10px 5%; }
             .hero h2 { font-size: 2.8rem; }
             .section-title { font-size: 2.2rem; }
         }
@@ -143,70 +139,74 @@
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#productos">Productos</a></li>
         <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="gracias.html">Contacto</a></li>
+        <li><a href="https://wa.me" target="_blank">Contacto</a></li>
     </ul>
-    <button class="menu-toggle" id="open-menu" aria-label="Menu">
+    <button class="menu-toggle" id="open-menu">
         <span></span><span></span><span></span>
     </button>
 </header>
 
+<!-- Menú Móvil -->
 <div class="mobile-overlay" id="mobile-overlay">
     <ul class="mobile-nav">
         <li><a href="#inicio">Inicio</a></li>
         <li><a href="#productos">Productos</a></li>
         <li><a href="#nosotros">Nosotros</a></li>
-        <li><a href="gracias.html">Contacto</a></li>
+        <li><a href="https://wa.me" target="_blank">Contacto</a></li>
     </ul>
 </div>
 
 <main>
+    <!-- Portada -->
     <section class="hero" id="inicio" style="max-width: 100%; padding: 0;">
         <div class="hero-content">
             <h2>Nutrición pura <br>desde la tierra</h2>
-            <p>Granola artesanal y semillas nativas premium para una vida saludable y consciente.</p>
-            <a class="btn-main" href="gracias.html">Comprar por WhatsApp</a>
+            <p>Granola artesanal y semillas nativas premium para una vida consciente.</p>
+            <a class="btn-main" href="https://wa.me" target="_blank">Comprar por WhatsApp</a>
         </div>
     </section>
 
+    <!-- Catálogo -->
     <section id="productos">
         <h2 class="section-title">Nuestra Selección</h2>
         <div class="productos">
             <div class="card">
-                <img src="fondo.jpg" alt="Granola Artesanal">
+                <img src="fondo.jpg" alt="Granola">
                 <div class="card-body">
                     <h3>Granola Artesanal</h3>
-                    <p>Mezcla crujiente de avena integral, frutos secos y miel de abeja 100% natural.</p>
-                    <a class="btn-buy" href="gracias.html">Pedir Ahora</a>
+                    <p>Mezcla crujiente de avena integral, frutos secos y miel natural.</p>
+                    <a class="btn-buy" href="https://wa.me" target="_blank">Pedir Ahora</a>
                 </div>
             </div>
             <div class="card">
-                <img src="fondo.jpg" alt="Semillas Nativas">
+                <img src="fondo.jpg" alt="Semillas">
                 <div class="card-body">
                     <h3>Semillas Nativas</h3>
-                    <p>Granos ancestrales puros, ricos en energía y nutrientes esenciales para tu día.</p>
-                    <a class="btn-buy" href="gracias.html">Pedir Ahora</a>
+                    <p>Granos ancestrales puros llenos de energía y nutrientes.</p>
+                    <a class="btn-buy" href="https://wa.me" target="_blank">Pedir Ahora</a>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Beneficios -->
     <div class="beneficios-container" id="nosotros">
         <h2 class="section-title">El Sello Seed & Grano</h2>
         <div class="beneficios">
             <div class="beneficio">
                 <span>🌱</span>
-                <h4>Origen Natural</h4>
-                <p>Sin aditivos químicos ni procesos industriales agresivos.</p>
+                <h4>100% Natural</h4>
+                <p>Sin aditivos químicos ni procesados industriales.</p>
             </div>
             <div class="beneficio">
                 <span>🔬</span>
                 <h4>Calidad Premium</h4>
-                <p>Procesos artesanales que conservan cada nutriente intacto.</p>
+                <p>Procesos artesanales que conservan cada nutriente.</p>
             </div>
             <div class="beneficio">
                 <span>📦</span>
                 <h4>Eco-Friendly</h4>
-                <p>Comprometidos con empaques de bajo impacto ambiental.</p>
+                <p>Comprometidos con empaques de bajo impacto.</p>
             </div>
         </div>
     </div>
@@ -214,11 +214,11 @@
 
 <footer>
     <p>© 2026 Seed & Grano | Alimentación Consciente Premium</p>
-    <p style="opacity: 0.5;">Hecho con pasión por la tierra.</p>
 </footer>
 
-<a class="whatsapp-float" href="gracias.html" aria-label="WhatsApp">
-    <img src="https://upload.wikimedia.org" alt="WA">
+<!-- Botón Flotante de WhatsApp -->
+<a class="whatsapp-float" href="https://wa.me" target="_blank">
+    <img src="https://upload.wikimedia.org" alt="WhatsApp">
 </a>
 
 <script>
